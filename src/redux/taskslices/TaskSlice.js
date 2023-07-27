@@ -6,16 +6,25 @@ export const taskSlice = createSlice({
   name: 'counter',
   initialState,
   reducers: {
+    /*the reducer are function */
     addTask: (state, action) => {
-      state = state.push(action.payload);
+      /* push used to add but it change the original table no need to return  */
+      state.push(action.payload);
     },
     deleteTask: (state, action) => {
-      state = state.filter((el) => el.id !== action.payload.id);
+      /*return a filtred !copy! of the table */
+      return state.filter((el) => el.id !== action.payload.id);
+    },
+    updateTask: (state, action) => {
+      /**/
+      return state.map((el) =>
+        el.id === action.payload.id ? action.payload : el
+      );
     },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { addTask, deleteTask } = taskSlice.actions;
+export const { addTask, deleteTask, updateTask } = taskSlice.actions;
 
 export default taskSlice.reducer;

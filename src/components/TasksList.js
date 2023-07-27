@@ -6,9 +6,9 @@ const TasksList = () => {
   const tasklists = useSelector((store) => store.tasks);
 
   return (
-    <div>
-      {tasklists.map((task, i) => (
-        <Task Key={i} task={task} />
+    <div className="list">
+      {tasklists.map((task, id) => (
+        <Task Key={id} task={task} />
       ))}
     </div>
   );

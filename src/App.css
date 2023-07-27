@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.centered-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
+  background: #6190e8; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #a7bfe8,
+    #6190e8
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #a7bfe8,
+    #6190e8
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  min-height: 40vh;
+  width: 600px;
+  background-color: #ece9e6;
+  box-shadow: 0 0 0 3px #6190e8;
+
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column; /* Elements inside container will stack vertically */
+  align-items: center; /* Center elements horizontally inside the container */
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  gap: 40px;
+  background-color: rgb(102, 56, 167);
+  padding: 40px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.header input {
+  padding: 10px;
+  width: 50vw;
+  height: 50px;
+  font-size: large;
+  border-radius: 16px;
+  border: none;
+  background-color: #ffffff;
+}
+.header button {
+  padding: 10px;
+  height: 40px;
+  font-size: large;
+  border-radius: 50px;
+  border: none;
+  background-color: #ffffff;
+}
+.list {
+  display: block;
+  width: 600px;
+  margin-inline: auto;
+}
+.task {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.task button {
+  margin: 15px;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  border: none;
+}
+.task h2 {
+  padding-right: 360px;
+  margin-top: 23px;
+}
+.task input {
+  margin-top: 19px;
+  padding: 10px;
+  width: 400px;
+  height: 50px;
+  font-size: large;
+  border-radius: 16px;
+  border: none;
+  background-color: #ffffff;
+}
+.title {
+  text-align: center;
+  font-size: 40px;
+  background-color: rgb(102, 56, 167);
+  color: #ffffff;
+  width: 600px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding: 7px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.done {
+  background-color: rgb(202, 253, 125);
+  border-radius: 10px;
+  min-height: 90px;
+  width: 600px;
+  margin-top: 20px;
+}
+.notdone {
+  background-color: rgb(245, 163, 125);
+  border-radius: 10px;
+  min-height: 90px;
+  width: 600px;
+  margin-top: 20px;
 }

@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addTask } from '../redux/taskslices/TaskSlice';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { v4 as uuidv4 } from 'uuid'; // Import the v4 method from uuid
 const Header = () => {
   const [newtask, SetNewTask] = useState({ title: '' });
   const dispatch = useDispatch();
+  const id = uuidv4();
   return (
-    <div>
+    <div className="header">
       {' '}
       <input
         value={newtask.title}
@@ -20,13 +23,13 @@ const Header = () => {
             addTask({
               ...newtask,
               isDone: false,
-              id: Math.floor(Math.random() + 10000000000000),
+              id,
             })
           );
           SetNewTask({ title: '' });
         }}
       >
-        ADD
+        <FontAwesomeIcon icon={faPlus} />{' '}
       </button>
     </div>
   );

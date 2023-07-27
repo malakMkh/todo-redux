@@ -4,9 +4,12 @@ import TasksList from './components/TasksList';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <TasksList />
+    <div className="centered-container">
+      <div className="container">
+        <div className="title"> TO DO LIST</div>
+        <Header />
+        <TasksList />
+      </div>
     </div>
   );
 }
