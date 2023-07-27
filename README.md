@@ -1,6 +1,7 @@
 # Todo App with Redux
 
 This is a simple Todo App built with React and Redux, allowing users to add, delete, and update tasks in a todo list.
+![Capture d’écran 2023-07-27 210239](https://github.com/malakMkh/todo-redux/assets/123992427/d37d8f34-f8dd-4944-8677-104a306ae0b7)
 
 ## Getting Started
 
