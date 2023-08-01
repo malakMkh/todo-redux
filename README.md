@@ -1,6 +1,6 @@
 # Todo App with Redux
 
-This is a simple Todo App built with React and Redux, allowing users to add, delete, and update tasks in a todo list.
+This is a simple Todo App built with React and Redux Toolkit , allowing users to add, delete, and update tasks in a todo list.
 ![Capture d’écran 2023-08-01 141752](https://github.com/malakMkh/todo-redux/assets/123992427/4ccad360-1ebb-45b0-9fb1-b6f873a23e2a)
 
 ## Getting Started
@@ -43,8 +43,7 @@ To run the app locally on your machine, follow these steps:
 ## Technologies Used
 
 - React: A JavaScript library for building user interfaces.
-- Redux: A predictable state container for managing application state.
-- React Redux: Official React bindings for Redux.
+- Redux Toolkit: A predictable state container for managing application state.
 - HTML/CSS: Basic markup and styling for the app.
 - JavaScript: The programming language used for the application logic.
 
